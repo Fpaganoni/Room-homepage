@@ -1,25 +1,8 @@
-// let img1 = document.querySelector(".img1");
-// let img2 = document.querySelector(".img2");
-// let img3 = document.querySelector(".img3");
-
-//
-// let backgroundContainer = document.querySelector(".background-container");
-
-// controlRight.addEventListener("click", () => {
-//   if ((img2.style.transform = "translate(-100%)")) {
-//     img3.style.transform = "translate(-200%)";
-//   }
-// });
-
-// controlRight.addEventListener("click", () => {
-//   if ((img1.style.transform = "translate(0)" || "")) {
-//     img2.style.transform = "translate(-100%)";
-//   }
-// });
+// SLIDER
 
 /* Variables to call */
-
-let backgrounds = document.querySelector(".backgrounds-mobile");
+let backgroundsMobile = document.querySelector(".backgrounds-mobile");
+let backgroundsDesktop = document.querySelector(".backgrounds-desktop");
 let controlRight = document.querySelector(".main_controls_right");
 let controlLeft = document.querySelector(".main_controls_left");
 
@@ -32,7 +15,9 @@ let moveToRight = () => {
   if (operacion > 200) {
     operacion = 0;
   }
-  backgrounds.style.transform = `translate(-${operacion}%)`;
+
+  backgroundsMobile.style.transform = `translate(-${operacion}%)`;
+  backgroundsDesktop.style.transform = `translate(-${operacion}%)`;
 };
 
 let moveToLeft = () => {
@@ -41,7 +26,8 @@ let moveToLeft = () => {
     operacion = 200;
   }
 
-  backgrounds.style.transform = `translate(-${operacion}%)`;
+  backgroundsMobile.style.transform = `translate(-${operacion}%)`;
+  backgroundsDesktop.style.transform = `translate(-${operacion}%)`;
 };
 
 /* Listeners for arrows */
