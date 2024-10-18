@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Room homepage</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <!--  SECTION MAIN -->
+      <section class="main_hero">
+        <div class="background-container">
+          <div class="backgrounds-mobile">
+            <img
+              src="/images/mobile-image-hero-1.jpg"
+              alt=""
+              class="background-img img1"
+            />
+            <img
+              src="/images/mobile-image-hero-2.jpg"
+              alt=""
+              class="background-img img2"
+            />
+            <img
+              src="/images/mobile-image-hero-3.jpg"
+              alt=""
+              class="background-img img3"
+            />
+          </div>
+        </div>
+
+        <nav class="main_nav container">
+          <svg
+            class="nav_hamburguer"
+            width="20"
+            height="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 12v2H0v-2h20zm0-6v2H0V6h20zm0-6v2H0V0h20z"
+              fill="hsl(0, 0%, 100%)"
+              fill-rule="evenodd"
+            />
+          </svg>
+
+          <svg
+            class="icon_close"
+            width="16"
+            height="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.364.222l1.414 1.414L9.414 8l6.364 6.364-1.414 1.414L8 9.414l-6.364 6.364-1.414-1.414L6.586 8 .222 1.636 1.636.222 8 6.586 14.364.222z"
+              fill="#a1a1a1"
+              fill-rule="evenodd"
+              opacity="1"
+            />
+          </svg>
+
+          <img src="images/logo.svg" alt="" class="main_logo" />
+
+          <ul class="main_links">
+            <ol class="main_list">
+              <a href="#" class="main_link">home</a>
+            </ol>
+
+            <ol class="main_list">
+              <a href="#" class="main_link">shop</a>
+            </ol>
+
+            <ol class="main_list">
+              <a href="#" class="main_link">about</a>
+            </ol>
+
+            <ol class="main_list">
+              <a href="#" class="main_link">contact</a>
+            </ol>
+          </ul>
+        </nav>
+      </section>
+
+      <!--   SECTION SHOP -->
+
+      <section class="main_shop container">
+        <div class="main_content">
+          <h2 class="main_title">Discover innovative ways to decorate</h2>
+
+          <p class="main_paragraph">
+            We provide unmatched quality, comfort, and style for property owners
+            across the country. Our experts combine form and function in
+            bringing your vision to life. Create a room in your own style with
+            our collection and make your property a reflection of you and what
+            you love.
+          </p>
+
+          <a href="#" class="main_cta"
+            >Shop now
+            <svg
+              width="40"
+              height="12"
+              class="svg_arrow"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="path_arrow"
+                d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+                fill="currentcolor"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="main_bg"></section>
+
+      <section class="main_about container">
+        <div class="main_content">
+          <h3 class="main_title">About our furniture</h3>
+          <p class="main_paragraph main_paragraph--about">
+            Our multifunctional collection blends design and function to suit
+            your individual taste. Make each room unique, or pick a cohesive
+            theme that best express your interests and what inspires you. Find
+            the furniture pieces you need, from traditional to contemporary
+            styles or anything in between. Product specialists are available to
+            help you create your dream space.
+          </p>
+        </div>
+      </section>
+
+      <section class="main_bg main_bg_second"></section>
+
+      <section class="main_controls">
+        <div class="main_controls_left">
+          <img
+            src="images/icon-angle-left.svg"
+            class="main_arrows main-arrow-left"
+          />
+        </div>
+
+        <div class="main_controls_right">
+          <img
+            src="images/icon-angle-right.svg"
+            class="main_arrows main-arrow-right"
+          />
+        </div>
+      </section>
+    </main>
+    <script src="main.js"></script>
+    <script src="hamburguer.js"></script>
+  </body>
+</html>

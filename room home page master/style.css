@@ -1,0 +1,332 @@
+:root {
+  --Dark-Gray: hsl(0, 0%, 63%);
+  --Black: hsl(0, 0%, 0%);
+  --White: hsl(0, 0%, 100%);
+  --Very-Dark-Gray: hsl(0, 0%, 27%);
+  --opacity: 1;
+  --brightness: brightness(0.6);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.main {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template: repeat(5, max-content) / 1fr;
+  grid-template-areas:
+    "main"
+    "shop"
+    "image1"
+    "about"
+    "image2";
+}
+
+.main_hero {
+  min-height: 400px;
+  position: relative;
+  grid-area: main;
+}
+
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.backgrounds-mobile {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: all 0.6s ease;
+}
+
+.background-img {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main_nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* STYLE FOR MENU HAMBURGUER*/
+
+main.open_menu {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+}
+
+main.open_menu .main_hero .main_logo,
+main.open_menu .main_hero .main_nav .nav_hamburguer {
+  display: none;
+}
+
+main.open_menu .main_hero .main_nav {
+  background-color: var(--White);
+  width: 100%;
+  animation: showMenu 1s forwards;
+}
+
+@keyframes menuClose {
+  from {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+}
+
+@keyframes showMenu {
+  from {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+main.open_menu .main_hero .main_nav .main_links {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 20px;
+}
+
+main.open_menu .main_hero .mauin_nav .main_linkd .main.list {
+  padding-left: 20px;
+}
+
+main.open_menu .main_hero .main_nav .main_links .main_list .main_link {
+  text-decoration: none;
+  color: var(--Black);
+  font-family: "League Spartan", sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+main.open_menu .main_hero .main_nav .icon_close {
+  margin-left: 30px;
+}
+
+main.open_menu .main_hero .background-container .backgrounds img {
+  opacity: var(--opacity);
+  filter: var(--brightness);
+}
+
+main.open_menu .main_bg_second {
+  opacity: var(--opacity);
+  filter: var(--brightness);
+}
+
+main.open_menu .main_controls {
+  filter: brightness(0.2);
+  cursor: none;
+}
+
+main.open_menu .main_nav .icon_close {
+  display: block;
+  z-index: 2;
+}
+
+/* END MENU BURGUER STYLE*/
+
+.nav_hamburguer {
+  margin-left: 30px;
+}
+
+.main_links {
+  display: none;
+}
+
+.main_link {
+  padding-bottom: 0.4em;
+  position: relative;
+}
+
+.main_list > .main_link::before {
+  content: "";
+  width: 100%;
+  background-color: var(--White);
+  height: 2px;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.main_link:hover::before {
+  transform: scaleX(1);
+}
+
+.main_logo {
+  margin: 0 auto;
+}
+
+.main_controls {
+  background-color: var(--Black);
+  width: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  grid-area: main;
+  place-self: end;
+  z-index: 2;
+}
+
+.main_controls_left,
+.main_controls_right {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_controls_left:hover,
+.main_controls_right:hover {
+  background-color: var(--Very-Dark-Gray);
+  cursor: pointer;
+}
+
+.main_arrows {
+  height: 40%;
+}
+
+.main_shop {
+  grid-area: shop;
+}
+
+.main_content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main_title {
+  color: var(--Black);
+  font-size: 2.3rem;
+}
+
+.main_paragraph {
+  line-height: 1.5;
+  margin: 1em 0 2em;
+  color: var(--Dark-Gray);
+}
+
+.main_cta {
+  text-decoration: none;
+  color: var(--Very-Dark-Gray);
+  text-transform: uppercase;
+  letter-spacing: 9px;
+}
+
+.main_cta:hover {
+  color: var(--Dark-Gray);
+}
+
+.main_arrow {
+  margin-left: 20px;
+}
+
+.main_bg {
+  grid-area: image1;
+  height: 100%;
+  min-height: 250px;
+  background-image: url(images/image-about-dark.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.main_about {
+  grid-area: about;
+}
+.main_bg_second {
+  grid-area: image2;
+  background-image: url(images/image-about-light.jpg);
+}
+
+.main_paragraph--about {
+  margin: 1em 0 0 0;
+}
+
+.icon_close {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main {
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, max-content);
+    grid-template-areas:
+      "main main main main shop shop shop"
+      "main main main main shop shop shop"
+      "main main main main shop shop shop"
+      "image1 image1 about about about image2 image2"
+      "image1 image1 about about about image2 image2";
+  }
+
+  .main_hero {
+    background-image: url(images/desktop-image-hero-1.jpg);
+  }
+
+  .container {
+    width: 85%;
+    padding: 70px 0;
+  }
+
+  .main_controls {
+    grid-area: shop;
+    justify-self: start;
+  }
+
+  .nav_hamburguer {
+    display: none;
+  }
+
+  .main_logo {
+    margin: 0;
+  }
+
+  .main_links {
+    display: flex;
+    gap: 0.1em;
+    padding: 0;
+  }
+
+  .main_list {
+    list-style: none;
+  }
+
+  .main_link {
+    text-decoration: none;
+    color: var(--White);
+    font-family: "League Spartan", sans-serif;
+  }
+}
