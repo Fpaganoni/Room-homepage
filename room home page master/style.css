@@ -347,22 +347,26 @@ main.open_menu .main_nav .icon_close {
 @media (min-width: 1440px) {
   .main {
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(5, 200px);
+    grid-template-rows: repeat(5, minMax(150px, 1fr));
     grid-template-areas:
-      "main main main main shop shop shop"
-      "main main main main shop shop shop"
-      "main main main main shop shop shop"
-      "image1 image1 about about about image2 image2"
+      "main main main main shop shop shop "
+      "main main main main shop shop shop "
+      "main main main main shop shop shop "
       "image1 image1 about about about image2 image2"
       "image1 image1 about about about image2 image2";
   }
 
+  .main_nav {
+    justify-content: flex-start;
+  }
+
   .main_logo {
-    width: 120px;
+    width: 70px;
+    margin-right: 1rem;
   }
 
   .main_link {
-    font-size: x-large;
+    font-size: 1.1rem;
   }
 
   .backgrounds-mobile {
@@ -376,15 +380,20 @@ main.open_menu .main_nav .icon_close {
     transition: transform 0.6s ease;
   }
 
+  .main_content {
+    padding: 0px 50px;
+  }
+
   .main_title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .main_paragraph {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .main_cta {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 700;
   }
 }
