@@ -178,7 +178,7 @@ main.open_menu .main_controls {
 .main_controls {
   background-color: var(--Black);
   width: 100px;
-  height: 50px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -189,7 +189,7 @@ main.open_menu .main_controls {
 
 .main_controls_left,
 .main_controls_right {
-  height: 50px;
+  height: 40px;
   width: 50px;
   display: flex;
   align-items: center;
@@ -224,6 +224,7 @@ main.open_menu .main_controls {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 1rem;
 }
 
 .main_content_about {
@@ -231,6 +232,7 @@ main.open_menu .main_controls {
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  padding: 0 1rem;
 }
 
 .main_title {
@@ -240,6 +242,9 @@ main.open_menu .main_controls {
 
 .title_about {
   text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 7px;
+  word-spacing: 5px;
 }
 
 .main_paragraph {
@@ -282,7 +287,7 @@ main.open_menu .main_controls {
 }
 
 .main_paragraph--about {
-  margin: 1em 0 0 0;
+  margin: 1.5em 0 0;
 }
 
 /* BREAK-POINT 768PX */
@@ -382,11 +387,16 @@ main.open_menu .main_controls {
   }
 
   .title_about {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
   }
 
   .main_paragraph {
     font-size: 0.8rem;
+  }
+
+  .main_paragraph--about {
+    margin: 1.1em 0 0;
   }
 
   .main_cta {
@@ -438,22 +448,22 @@ main.open_menu .main_controls {
     padding: 0 20px 40px;
   }
 
-  .main_about {
-    padding: 0;
-    margin-top: 1rem;
-  }
-
   .title_about {
     letter-spacing: 0.3rem;
+    padding: 2rem 0;
   }
 
   .main_content_about {
     height: 100%;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 
   .main_paragraph {
     margin: 1.4em 0 2em;
+  }
+
+  .main_about {
+    margin: 0;
   }
 
   .main_paragraph--about {
@@ -531,9 +541,9 @@ main.open_menu .main_controls {
     padding: 0 35px 60px 40px;
   }
 
-  .main_content_about {
+  /* .main_content_about {
     padding: 0 50px;
-  }
+  } */
 
   .main_paragraph {
     font-size: 1.1rem;
